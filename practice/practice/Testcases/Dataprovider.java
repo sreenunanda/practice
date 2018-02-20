@@ -5,20 +5,10 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFComment;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFTextbox;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFComment;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -30,7 +20,7 @@ public class Dataprovider {
 	
 	@BeforeClass
 	public void beforeclass() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Sreenu\\eclipse-workspace\\myproject\\practice\\drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Sreenu\\Downloads\\practice\\drivers\\geckodriver.exe");
 		driver=new FirefoxDriver();
 		driver.get("http://192.168.0.122:9012/mifare-web/admin/login#no-back-button");
 		driver.manage().window().maximize();
@@ -45,7 +35,7 @@ public class Dataprovider {
 		driver.findElement(By.id("loginPass")).clear();
 		driver.findElement(By.id("loginPass")).sendKeys(loginTestData.get("password"));
 
-		if(loginTestData.get("action").equals("submit")) {
+		if(loginTestData.get("action").equalsIgnoreCase("submit")) {
 			driver.findElement(By.id("loginSubmit")).click();
 			System.out.println("test case id: **"+loginTestData.get("TC ID")+"** is executed");
 		}
@@ -63,7 +53,7 @@ public class Dataprovider {
 	
 	@DataProvider(name="testData")
 	public Object[][] getData() throws IOException{
-		FileInputStream filepath = new FileInputStream("C:\\Users\\Sreenu\\eclipse-workspace\\myproject\\practice\\testdata.xls");
+		FileInputStream filepath = new FileInputStream("C:\\Users\\Sreenu\\Downloads\\practice\\testdata.xls");
 
 		HSSFWorkbook wb = new HSSFWorkbook(filepath);
 		HSSFSheet sheet = wb.getSheet("Sheet1");

@@ -1,6 +1,6 @@
 package Testcases;
 
-public class practice{
+public class SwitchTo{
 
 		
 	    public static void main(String[] args)
