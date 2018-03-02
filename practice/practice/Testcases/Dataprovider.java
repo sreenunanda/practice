@@ -1,5 +1,6 @@
 package Testcases;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashMap;
@@ -17,13 +18,14 @@ import org.testng.annotations.Test;
 
 public class Dataprovider {
 	WebDriver driver;
-	
+	private static String filepath=null;
 	@BeforeClass
-	public void beforeclass() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Sreenu\\Downloads\\practice\\drivers\\geckodriver.exe");
+	public void beforeclass() throws Throwable {
+		System.setProperty("webdriver.gecko.driver", PropertyHandler.getProperty("geckodriver"));
 		driver=new FirefoxDriver();
-		driver.get("http://192.168.0.122:9012/mifare-web/admin/login#no-back-button");
 		driver.manage().window().maximize();
+		Thread.sleep(1000);
+		driver.get("http://192.168.0.122:9012/mifare-web/admin/login#no-back-button");
 	}
 	
 	@Test(dataProvider="testData")
@@ -53,9 +55,12 @@ public class Dataprovider {
 	
 	@DataProvider(name="testData")
 	public Object[][] getData() throws IOException{
-		FileInputStream filepath = new FileInputStream("C:\\Users\\Sreenu\\Downloads\\practice\\testdata.xls");
+		filepath="./testdata.xls";
+		File file=new File(filepath);
+		FileInputStream fileInputStream=new FileInputStream(file);
+//		FileInputStream filepath = new FileInputStream("C:\\Users\\Sreenu\\Downloads\\practice\\testdata.xls");
 
-		HSSFWorkbook wb = new HSSFWorkbook(filepath);
+		HSSFWorkbook wb = new HSSFWorkbook(fileInputStream);
 		HSSFSheet sheet = wb.getSheet("Sheet1");
 		int rowsCount=sheet.getLastRowNum();
 		int colCount=sheet.getRow(0).getLastCellNum();

@@ -5,8 +5,7 @@
     <classes>
       <class name="Testcases.Dataprovider">
         <methods>
-          <include name="afterclass"/>
-          <include name="loginpage" invocation-numbers="0 1 2 3"/>
+          <include name="loginpage"/>
           <include name="beforeclass"/>
         </methods>
       </class> <!-- Testcases.Dataprovider -->

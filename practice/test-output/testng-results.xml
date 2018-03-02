@@ -2,60 +2,60 @@
 <testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8408" started-at="2018-02-19T06:21:32Z" finished-at="2018-02-19T06:21:41Z">
+  <suite name="Default suite" duration-ms="10061" started-at="2018-03-02T05:32:38Z" finished-at="2018-03-02T05:32:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8408" started-at="2018-02-19T06:21:32Z" finished-at="2018-02-19T06:21:41Z">
+    <test name="Default test" duration-ms="10061" started-at="2018-03-02T05:32:38Z" finished-at="2018-03-02T05:32:48Z">
       <class name="Testcases.Dataprovider">
-        <test-method status="PASS" signature="beforeclass()[pri:0, instance:Testcases.Dataprovider@7fac631b]" name="beforeclass" is-config="true" duration-ms="5095" started-at="2018-02-19T11:51:32Z" finished-at="2018-02-19T11:51:37Z">
+        <test-method status="PASS" signature="beforeclass()[pri:0, instance:Testcases.Dataprovider@7fac631b]" name="beforeclass" is-config="true" duration-ms="6595" started-at="2018-03-02T11:02:38Z" finished-at="2018-03-02T11:02:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeclass -->
-        <test-method status="PASS" signature="loginpage(java.util.Map)[pri:0, instance:Testcases.Dataprovider@7fac631b]" name="loginpage" duration-ms="741" started-at="2018-02-19T11:51:38Z" data-provider="testData" finished-at="2018-02-19T11:51:38Z">
+        <test-method status="PASS" signature="loginpage(java.util.Map)[pri:0, instance:Testcases.Dataprovider@7fac631b]" name="loginpage" duration-ms="729" started-at="2018-03-02T11:02:45Z" data-provider="testData" finished-at="2018-03-02T11:02:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{TC ID=Case 1, password=pass1, action=submit, username=user1}]]>
+                <![CDATA[{TC ID=Test Case 1, password=pass1, action=submit, username=user1}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginpage -->
-        <test-method status="PASS" signature="loginpage(java.util.Map)[pri:0, instance:Testcases.Dataprovider@7fac631b]" name="loginpage" duration-ms="679" started-at="2018-02-19T11:51:38Z" data-provider="testData" finished-at="2018-02-19T11:51:39Z">
+        <test-method status="PASS" signature="loginpage(java.util.Map)[pri:0, instance:Testcases.Dataprovider@7fac631b]" name="loginpage" duration-ms="687" started-at="2018-03-02T11:02:46Z" data-provider="testData" finished-at="2018-03-02T11:02:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{TC ID=Case 2, password=pass2, action=cancel, username=user2}]]>
+                <![CDATA[{TC ID=Test Case 2, password=pass2, action=cancel, username=user2}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginpage -->
-        <test-method status="PASS" signature="loginpage(java.util.Map)[pri:0, instance:Testcases.Dataprovider@7fac631b]" name="loginpage" duration-ms="636" started-at="2018-02-19T11:51:39Z" data-provider="testData" finished-at="2018-02-19T11:51:40Z">
+        <test-method status="PASS" signature="loginpage(java.util.Map)[pri:0, instance:Testcases.Dataprovider@7fac631b]" name="loginpage" duration-ms="694" started-at="2018-03-02T11:02:46Z" data-provider="testData" finished-at="2018-03-02T11:02:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{TC ID=Case 3, password=pass3, action=cancel, username=user3}]]>
+                <![CDATA[{TC ID=Test Case 3, password=pass3, action=cancel, username=user3}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginpage -->
-        <test-method status="PASS" signature="loginpage(java.util.Map)[pri:0, instance:Testcases.Dataprovider@7fac631b]" name="loginpage" duration-ms="673" started-at="2018-02-19T11:51:40Z" data-provider="testData" finished-at="2018-02-19T11:51:40Z">
+        <test-method status="PASS" signature="loginpage(java.util.Map)[pri:0, instance:Testcases.Dataprovider@7fac631b]" name="loginpage" duration-ms="670" started-at="2018-03-02T11:02:47Z" data-provider="testData" finished-at="2018-03-02T11:02:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{TC ID=Case 4, password=pass4, action=submit, username=user4}]]>
+                <![CDATA[{TC ID=Test Case 4, password=pass4, action=submit, username=user4}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginpage -->
-        <test-method status="PASS" signature="afterclass()[pri:0, instance:Testcases.Dataprovider@7fac631b]" name="afterclass" is-config="true" duration-ms="385" started-at="2018-02-19T11:51:40Z" finished-at="2018-02-19T11:51:41Z">
+        <test-method status="PASS" signature="afterclass()[pri:0, instance:Testcases.Dataprovider@7fac631b]" name="afterclass" is-config="true" duration-ms="497" started-at="2018-03-02T11:02:48Z" finished-at="2018-03-02T11:02:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterclass -->
