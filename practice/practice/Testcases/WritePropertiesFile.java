@@ -12,11 +12,12 @@ import java.util.Properties;
 
 public class WritePropertiesFile {
 	public static void main(String[] args) throws Exception {
-		Properties p=new Properties();  
+	/*	Properties p=new Properties();  
 		p.setProperty("name","Sonoo Jaiswal");  
 		p.setProperty("email","sonoojaiswal@javatpoint.com");  
 		  
-		p.store(new FileWriter("test2.properties"),"Javatpoint Properties Example");  
+		p.store(new FileWriter("test2.properties"),"Javatpoint Properties Example");  */
+		
 		
 		/*Properties prop = new Properties();
 		OutputStream output = null;
@@ -45,7 +46,7 @@ public class WritePropertiesFile {
 			}
 
 		}*/
-		/*try {
+		try {
 			SimpleDateFormat dateFormat = new SimpleDateFormat("ddyymss");
 			String getdate  = dateFormat.format(new Date());
 			Properties properties = new Properties();
@@ -57,7 +58,7 @@ public class WritePropertiesFile {
 			//trail
 //			System.out.println(properties.getProperty("Date"));
 			
-			File file = new File("test2.properties");
+			File file = new File("testdata.properties");
 			FileOutputStream fileOut = new FileOutputStream(file);
 			properties.store(fileOut, "appending values");
 			fileOut.close();
@@ -66,6 +67,5 @@ public class WritePropertiesFile {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-*/
 	}
 }
