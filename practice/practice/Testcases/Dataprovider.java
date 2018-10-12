@@ -140,7 +140,7 @@ public class Dataprovider {
 			return null;
 		}
 	
-	public Object setFormatter(Cell cell) {
+	public String setFormatter(Cell cell) {
 		DataFormatter formatter = new DataFormatter();
 		String cellValue = formatter.formatCellValue(cell);
 		return cellValue;
