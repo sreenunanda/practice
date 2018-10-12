@@ -100,7 +100,7 @@ public class Dataprovider {
 			Map<Object, Object>datamap=new HashMap<Object, Object>();
 			for(int j=0;j<colCount;j++) {
 				int cell=-1;
-				datamap.put(sheet.getRow(0).getCell(j).toString(), sheet.getRow(i).getCell(j).toString());
+				datamap.put(setFormatter(sheet.getRow(0).getCell(j)), setFormatter(sheet.getRow(i).getCell(j)));
 				/*datamap.put("TCID", sheet.getRow(i).getCell(++cell).toString());
 				datamap.put("UserName", sheet.getRow(i).getCell(++cell).toString());
 				datamap.put("Password", sheet.getRow(i).getCell(++cell).toString());
@@ -139,5 +139,11 @@ public class Dataprovider {
 			}
 			return null;
 		}
+	
+	public Object setFormatter(Cell cell) {
+		DataFormatter formatter = new DataFormatter();
+		String cellValue = formatter.formatCellValue(cell);
+		return cellValue;
+	}
 }
 
