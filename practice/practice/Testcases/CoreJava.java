@@ -1,9 +1,9 @@
-package demo.demo;
+package Testcases;
 
 import java.util.Arrays;
 import java.util.Collections;
 
-public class Test {
+public class CoreJava {
 
 	public static void main(String[] args) {
 		//reverse string
