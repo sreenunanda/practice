@@ -1,7 +1,6 @@
 package Testcases;
 
 import org.testng.annotations.Test;
-import constants.Class1;
 
 public class ClassA extends WebElementUtils{
 	
