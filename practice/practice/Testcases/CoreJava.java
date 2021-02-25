@@ -1,7 +1,9 @@
 package Testcases;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 import org.testng.annotations.Test;
 
@@ -17,7 +19,22 @@ public class CoreJava {
 		}
 		System.out.println(reverse);
 	}
-	
+	@Test
+	public void count() {
+		List<Integer> list=new ArrayList<Integer>();
+		list.add(1);
+		list.add(4);
+		list.add(7);
+		list.add(10);
+		System.out.println(list);
+	    int a=list.get(0);
+	      int b=list.get(1);
+	    int newNum=a+b; //5
+	    list.remove(0);
+	list.remove(1);
+//	    list.add(newNum);
+	      		System.out.println(list);
+	}
 	@Test
 	public void reverseWords() {
 		// reverse each word in content

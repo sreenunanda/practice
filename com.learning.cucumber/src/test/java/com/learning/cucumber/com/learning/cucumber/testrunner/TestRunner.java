@@ -5,6 +5,7 @@ import org.testng.annotations.DataProvider;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
+//@RunWith(Cucumber.class)junit
 @CucumberOptions(features = "features", glue = {"stepdefinitions" }, 
 dryRun = true, strict = false, monochrome = true, plugin = { "pretty",
 				"html:target/cucumber-html-report", "json:target/cucumber.json",

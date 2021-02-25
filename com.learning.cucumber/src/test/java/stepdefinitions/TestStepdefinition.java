@@ -3,11 +3,14 @@ package stepdefinitions;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
+import cucumber.api.DataTable;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -106,5 +109,23 @@ public class TestStepdefinition {
 	public void i_verify_the_Fail_in_step() {
 		// Write code here that turns the phrase above into concrete actions
 	}
+	@Then("^I enter username and password$")
+	public void enterUsernameAndPassword(DataTable testData) throws Throwable {
 
+		Map<String, String> data = testData.asMap(String.class, String.class);
+
+		driver.findElement(By.id("email")).sendKeys(data.get("username"));
+		driver.findElement(By.id("pass")).sendKeys(data.get("password"));
+
+	}
+	
+	@Then("^I Clicked on the login button$")
+	public void clickOnloginButton() throws Throwable {
+		driver.findElement(By.id("u_0_2")).click();
+	}
+
+	@Then("^I verified that login is successful$")
+	public void verifyLoginIsSuccessful() throws Throwable {
+		System.out.println(driver.getTitle());
+	}
 }
